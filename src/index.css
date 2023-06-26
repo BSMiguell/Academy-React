@@ -1,14 +1,4 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-}
+/* ========= CSS VARIABLES ========= */
 :root {
   /* --primary-hue: 20;
     --gray-hue: 280; */
@@ -29,17 +19,26 @@
 
   --transition: all 500ms ease;
 }
+/* === x === x === == x === x === */
+
+/* ========= RESET ========= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--color-gray-200);
   line-height: 1.7;
   overflow-x: hidden;
   background: var(--color-gray-600);
-}
-.container {
-  width: var(--container-width-lg);
-  max-width: 1920px;
-  margin-inline: auto;
 }
 h1,
 h2,
@@ -63,6 +62,66 @@ img {
   object-fit: cover;
   width: 100%;
 }
+section {
+  margin-top: 10rem;
+}
+/* === x === x === == x === x === */
+
+/* ========= REUSABLE CSS CLASSES ========= */
+.container {
+  width: var(--container-width-lg);
+  max-width: 1920px;
+  margin-inline: auto;
+}
+.section__head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section__head span {
+  background: var(--color-gray-500);
+  padding: 0.8rem;
+  border-radius: 1rem;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+}
+.card {
+  background: var(--color-gray-500);
+  border: 2px solid transparent;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 0 3rem 0 3rem;
+  transition: var(--transition);
+}
+.card:hover {
+  background: transparent;
+  border-color: var(--color-gray-400);
+  cursor: default;
+}
+.card span {
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-primary);
+  color: var(--color-gray-100);
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.5rem;
+  margin-inline: auto;
+  border-radius: 1rem;
+  transition: var(--transition);
+}
+.card:hover span {
+  background: var(--color-secondary);
+  color: var(--color-gray-600);
+}
+.card small {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 300;
+}
+/* --- Reusable Style Button --- */
 .btn {
   color: var(--color-gray-100);
   width: fit-content;
@@ -88,3 +147,4 @@ img {
 .btn.sm:hover {
   background: var(--color-gray-100);
 }
+/* === x === x === == x === x === */
