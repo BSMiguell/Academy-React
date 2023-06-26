@@ -18,4 +18,5 @@ const FAQS = () => {
     </section>
   );
 };
+
 export default FAQS;
