@@ -21,4 +21,5 @@ const FAQ = ({ question, answer }) => {
     </article>
   );
 };
+
 export default FAQ;
